@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% include 'includes/pagination.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <ul class="list-unstyled">
+      {% for object in object_list %}
+      <li class="media">
+        <img class="mr-3" src="..." alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">{{object.name}}</h5>
+          {{object.team1}}Score:{{object.score_t1}}
+          {{object.team2}}Score:{{object.score_t2}}
+          {{object.winner}}
+          {{object.game_date}}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    </div>
+    </div>
+    
+  
+{%endblock content %}
